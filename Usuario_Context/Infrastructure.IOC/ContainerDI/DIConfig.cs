@@ -29,11 +29,12 @@ namespace Infrastructure.IOC.ContainerDI
             services.AddScoped<IEventBus, EventBus>();
             services.AddScoped<IUserService, UserService>();
 
-            // Carregamento do assembly de Aplicação para MediatR
-            var myHandlers = AppDomain.CurrentDomain.Load("Application");
-
-            // Adição de MediatR
-            services.AddMediatR(myHandlers);
+            services.AddMediatR(cfg =>
+            {
+                //É necessário somente 1 instancia e o mediatr localiza os outros, mas por organizacao, coloquei todos.
+                cfg.RegisterServicesFromAssembly(typeof(SendEmailOnUserCreatedHandler).Assembly);
+                cfg.RegisterServicesFromAssembly(typeof(SendSmsOnUserCreateHandler).Assembly);
+            });
         }
 
         public static T GetService<T>()

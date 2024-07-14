@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S/ay6OpZGN4=",
+  "dgSpecHash": "GVACnviENP0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruno\\source\\repos\\Treinamento2\\Usuario_Context\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Bruno\\Documents\\GitHub\\DDD_DomainEvents_Mediatr\\Usuario_Context\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
